@@ -1,11 +1,11 @@
 <?php
 
-include_once('Conexao.php');
+include_once('conexao.php');
 
 $conexao = new Conexao();
 $id = $_GET['id'];
 
-$stmt = $conexao->conn->prepare('SELECT * FROM usuarios WHERE id = :id');
+$stmt = $conexao->conn->prepare('SELECT * FROM contatos WHERE id = :id');
 $stmt->execute(array('id' => $id));
 $dados = [];
 
