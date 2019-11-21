@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $senha = $_POST['telefone'];
 
 
-$smtp = $conexao->conn->prepare('UPDATE usuarios SET nome = :nome, email = :email, senha = :senha WHERE id = :id');
+$smtp = $conexao->conn->prepare('UPDATE usuarios SET nome = :nome, email = :email, telefone = :telefone WHERE id = :id');
 
 $smtp->execute(array(
 	'nome' => $nome,
