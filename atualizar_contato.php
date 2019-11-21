@@ -7,7 +7,7 @@ $conexao = new Conexao();
 $id = $_POST['id'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = $_POST['telefone'];
 
 
 $smtp = $conexao->conn->prepare('UPDATE usuarios SET nome = :nome, email = :email, senha = :senha WHERE id = :id');
@@ -15,7 +15,7 @@ $smtp = $conexao->conn->prepare('UPDATE usuarios SET nome = :nome, email = :emai
 $smtp->execute(array(
 	'nome' => $nome,
 	'email' => $email,
-	'senha' => $senha,
+	'senha' => $telefone,
 	'id' => $id )
 	
 );    
