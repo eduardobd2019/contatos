@@ -1,7 +1,7 @@
 <?php
-include_once 'Conexao.php';
+include_once 'conexao.php';
 $conexao = new Conexao();
-$smtp = $conexao->conn->prepare("SELECT * FROM usuarios");
+$smtp = $conexao->conn->prepare("SELECT * FROM contatos");
 $smtp->execute();
 $dados = [];
 //CADA REPETIÇÃO BUSCARA UM ITEM DO BANCO Enquanto tiver dados
